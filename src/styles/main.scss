@@ -8,6 +8,7 @@
 body {
   background-color: rgba(128, 128, 128, 0.192);
   overflow: auto;
+  position: relative;
 }
 
 .card {
@@ -42,7 +43,7 @@ body {
     }
 
     .accounts::-webkit-scrollbar {
-      width: 10px; 
+      width: 10px;
     }
 
     .account {
@@ -59,7 +60,7 @@ body {
       font-size: 16px;
       width: 90px;
       box-sizing: content-box;
-      background-color: rgb(37, 175, 37);
+      background-color: rgb(40, 187, 40);
       cursor: pointer;
       color: #fff;
       border: none;
@@ -145,4 +146,82 @@ body {
       }
     }
   }
+}
+
+.modal {
+  position: absolute;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 20px;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -70%);
+  z-index: 1000;
+  width: 450px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2{
+    text-align: center;
+    padding:  0px 15px;
+    color: #333;
+    font-size: 32px;
+  }
+
+  .form{
+    display: flex;
+    gap: 30px;
+    padding: 25px 30px;
+
+    .name, .start_balance{
+    display: flex;
+    flex-direction: column;
+    }
+
+    label{
+      font-size: 19px;
+      margin-bottom: 5px;
+    }
+
+    input{
+      width: 120px;
+      border: 1px solid gray;
+      height: 40px;
+      color: #333;
+      border-radius: 6px;
+      text-align: center;
+      outline: none;
+      font-size: 18px;
+    }
+  }
+
+  button{
+    border: none;
+    background-color: rgb(40, 187, 40);
+    padding: 15px 25px;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 8px;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+}
+
+.overlay {
+  position: fixed;
+  z-index: 777;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.hidden{
+  display: none;
 }
