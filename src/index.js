@@ -1,4 +1,5 @@
 import "./styles/main.scss";
+import BankAccount from "./bank-account";
 
 const modal = document.querySelector(".modal");
 const modalNameInput = document.querySelector(".name input");
@@ -23,26 +24,6 @@ const accountDataCard = document.querySelector(".account-data");
 
 let accountsArr = [];
 let selectedAccount = null;
-
-function BankAccount(ownerName, initialBalance) {
-  this.ownerName = ownerName;
-  this.balance = initialBalance;
-}
-
-BankAccount.prototype.deposit = function (amount) {
-  if (amount < 0) return;
-  this.balance += amount;
-};
-
-BankAccount.prototype.withdraw = function (amount) {
-  if (amount > this.balance || amount < 0) return;
-
-  this.balance -= amount;
-};
-
-BankAccount.prototype.getBalance = function () {
-  return this.balance;
-};
 
 const showModal = () => {
   modal.classList.remove("hidden");
@@ -109,5 +90,3 @@ withdrawApplyBtn.addEventListener("click", function () {
   updateAccountData();
   withdrawInput.value = null;
 });
-
-module.exports = { BankAccount };
