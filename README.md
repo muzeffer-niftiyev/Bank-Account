@@ -27,7 +27,7 @@ This project lets you create several bank account and control their withdrawal a
 
 ## 🚀 Demo
 
-[🔗 Bank Account App](bank-account-1.netlify.app)
+[🔗 Bank Account App](https://bank-account-1.netlify.app)
 
 ---
 
