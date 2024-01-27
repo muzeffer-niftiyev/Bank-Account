@@ -4,7 +4,7 @@
 
 ## 📝 Description
 
-Welcome to the Bank Account App!
+Welcome to the Bank Account App! <br>
 This project lets you create several bank account and control their withdrawal and deposit amounts and shows you current balance on each account.
 
 #### 💻 Technologies
